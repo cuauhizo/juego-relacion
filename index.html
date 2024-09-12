@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/favicon.png" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Juego AXION</title>
+    <link
+      rel="stylesheet"
+      href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Arrastra el programa a la imagen correspondiente:</h1>
+      <div class="game">
+        <div
+          class="column"
+          id="programas">
+          <!-- Imágenes de programas se generarán aquí -->
+        </div>
+        <div
+          class="column"
+          id="objetos">
+          <!-- Objetos con áreas de drop se generarán aquí -->
+        </div>
+        <canvas id="canvas"></canvas>
+      </div>
+
+      <div class="controls">
+        <button id="check">Verificar</button>
+        <button
+          id="retry"
+          style="display: none">
+          Intentar de nuevo
+        </button>
+      </div>
+      <p
+        id="result"
+        aria-live="polite"></p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

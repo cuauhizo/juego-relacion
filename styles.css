@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* html {
+  height: -webkit-fill-available;
+} */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #d0df00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  height: -webkit-fill-available;
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+  color: #63666a;
+}
+
+.container {
+  text-align: center;
+  width: 100%;
+  max-width: 900px;
+}
+
+h1 {
+  margin-top: 20px;
+  font-size: clamp(1.2rem, 4vw, 2rem);
+}
+
+.game {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  position: relative;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 48%;
+}
+
+.column img,
+.dropzone {
+  width: 100%;
+  max-width: 305px;
+  height: auto;
+  aspect-ratio: 2/1;
+  margin: 10px 0;
+  object-fit: cover;
+}
+
+.column img {
+  cursor: grab;
+}
+
+.dropzone {
+  border: 2px dashed #63666a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background: #63666a;
+  color: #fff;
+  border: 1px solid #63666a;
+  border-radius: 10px;
+  font-size: clamp(0.8rem, 3vw, 1rem);
+}
+
+#result {
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  margin-top: 20px;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  /* background: #333; */
+}
+
+.dragging {
+  opacity: 0.7;
+  transform: scale(0.5);
+  transition: opacity 0.3s, transform 0.3s;
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  -o-transform: scale(0.5);
+  -webkit-transition: opacity 0.3s, transform 0.3s;
+  -moz-transition: opacity 0.3s, transform 0.3s;
+  -ms-transition: opacity 0.3s, transform 0.3s;
+  -o-transition: opacity 0.3s, transform 0.3s;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 5px;
+  }
+
+  .column {
+    width: 40%;
+  }
+
+  .column img,
+  .dropzone {
+    margin: 5px 0;
+  }
+
+  button {
+    padding: 8px 16px;
+  }
+}
